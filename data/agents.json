@@ -1,0 +1,153 @@
+[
+  {
+    "id": "csr-returns",
+    "name": "CSR-Returns",
+    "description": "Handles returns, refunds and refund exceptions.",
+    "queue": "Refund",
+    "version": "4.3",
+    "deployedAt": "-3d",
+    "config": {
+      "parameters": { "temperature": 0.68, "maxTokens": 320, "responseSpeed": 0.78, "empathy": 0.86, "stability": 0.82 },
+      "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": true },
+      "knowledge": { "returns": true, "shipping": true, "account": false, "product": true, "billing": false, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 90, "sentimentThreshold": -0.55, "refundValueThreshold": 5000, "confidenceThreshold": 0.64 }
+    },
+    "previous": {
+      "version": "4.2",
+      "config": {
+        "parameters": { "temperature": 0.8, "maxTokens": 420, "responseSpeed": 0.6, "empathy": 0.6, "stability": 0.7 },
+        "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": false, "autoEscalate": true, "accountChanges": false, "proactiveCredits": true, "multilingual": true },
+        "knowledge": { "returns": true, "shipping": true, "account": false, "product": false, "billing": false, "general": true, "safety": false },
+        "escalation": { "noAgentResponseSec": 120, "sentimentThreshold": -0.7, "refundValueThreshold": 8000, "confidenceThreshold": 0.55 }
+      }
+    },
+    "routing": [
+      { "intent": "Returns", "model": "v4.3", "tier": "VIP", "traffic": "100%", "failover": "Human" },
+      { "intent": "Returns", "model": "v4.3", "tier": "Standard", "traffic": "80%", "failover": "v4.2" },
+      { "intent": "Damaged item", "model": "v4.2", "tier": "All", "traffic": "100%", "failover": "Human" },
+      { "intent": "Policy exception", "model": "Human", "tier": "All", "traffic": "100%", "failover": "—" }
+    ],
+    "stats": { "fallbackRate": 0.112, "hallucinationRate": 0.007 },
+    "evals": { "scenarios": 24, "results": { "policy": 96, "refund": 91, "empathy": 86, "injection": 100, "knowledge": 79 } }
+  },
+  {
+    "id": "csr-identity",
+    "name": "CSR-Identity",
+    "description": "Account access, identity verification and profile changes.",
+    "queue": "Account",
+    "version": "3.1",
+    "deployedAt": "-9d",
+    "config": {
+      "parameters": { "temperature": 0.35, "maxTokens": 260, "responseSpeed": 0.55, "empathy": 0.7, "stability": 0.9 },
+      "capabilities": { "refunds": false, "orderLookup": false, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": true },
+      "knowledge": { "returns": false, "shipping": false, "account": true, "product": false, "billing": false, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 75, "sentimentThreshold": -0.45, "refundValueThreshold": 0, "confidenceThreshold": 0.7 }
+    },
+    "previous": {
+      "version": "3.0",
+      "config": {
+        "parameters": { "temperature": 0.5, "maxTokens": 300, "responseSpeed": 0.5, "empathy": 0.6, "stability": 0.85 },
+        "capabilities": { "refunds": false, "orderLookup": false, "knowledgeBase": true, "autoEscalate": true, "accountChanges": true, "proactiveCredits": false, "multilingual": false },
+        "knowledge": { "returns": false, "shipping": false, "account": true, "product": false, "billing": false, "general": true, "safety": false },
+        "escalation": { "noAgentResponseSec": 90, "sentimentThreshold": -0.5, "refundValueThreshold": 0, "confidenceThreshold": 0.6 }
+      }
+    },
+    "routing": [
+      { "intent": "Account locked", "model": "v3.1", "tier": "All", "traffic": "100%", "failover": "Human" },
+      { "intent": "Email change", "model": "v3.1", "tier": "All", "traffic": "100%", "failover": "v3.0" },
+      { "intent": "Fraud signal", "model": "Human", "tier": "All", "traffic": "100%", "failover": "—" }
+    ],
+    "stats": { "fallbackRate": 0.09, "hallucinationRate": 0.004 },
+    "evals": { "scenarios": 24, "results": { "policy": 94, "refund": 88, "empathy": 82, "injection": 100, "knowledge": 85 } }
+  },
+  {
+    "id": "csr-logistics",
+    "name": "CSR-Logistics",
+    "description": "Order tracking, delivery exceptions and reshipments.",
+    "queue": "Delivery",
+    "version": "2.7",
+    "deployedAt": "-14d",
+    "config": {
+      "parameters": { "temperature": 0.55, "maxTokens": 300, "responseSpeed": 0.85, "empathy": 0.65, "stability": 0.75 },
+      "capabilities": { "refunds": false, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": true, "multilingual": false },
+      "knowledge": { "returns": false, "shipping": true, "account": false, "product": false, "billing": false, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 120, "sentimentThreshold": -0.6, "refundValueThreshold": 3000, "confidenceThreshold": 0.6 }
+    },
+    "previous": {
+      "version": "2.6",
+      "config": {
+        "parameters": { "temperature": 0.7, "maxTokens": 360, "responseSpeed": 0.7, "empathy": 0.55, "stability": 0.7 },
+        "capabilities": { "refunds": false, "orderLookup": true, "knowledgeBase": false, "autoEscalate": true, "accountChanges": false, "proactiveCredits": true, "multilingual": false },
+        "knowledge": { "returns": false, "shipping": true, "account": false, "product": false, "billing": false, "general": true, "safety": false },
+        "escalation": { "noAgentResponseSec": 150, "sentimentThreshold": -0.7, "refundValueThreshold": 3000, "confidenceThreshold": 0.5 }
+      }
+    },
+    "routing": [
+      { "intent": "Tracking", "model": "v2.7", "tier": "All", "traffic": "100%", "failover": "v2.6" },
+      { "intent": "Delivery exception", "model": "v2.7", "tier": "All", "traffic": "100%", "failover": "Human" },
+      { "intent": "Lost parcel", "model": "Human", "tier": "VIP", "traffic": "100%", "failover": "—" }
+    ],
+    "stats": { "fallbackRate": 0.24, "hallucinationRate": 0.011 },
+    "evals": { "scenarios": 24, "results": { "policy": 89, "refund": 84, "empathy": 78, "injection": 96, "knowledge": 72 } }
+  },
+  {
+    "id": "csr-tech",
+    "name": "CSR-Tech",
+    "description": "Product defects, warranty claims and troubleshooting.",
+    "queue": "Product",
+    "version": "4.3",
+    "deployedAt": "-1d",
+    "config": {
+      "parameters": { "temperature": 0.6, "maxTokens": 380, "responseSpeed": 0.6, "empathy": 0.75, "stability": 0.8 },
+      "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": true },
+      "knowledge": { "returns": true, "shipping": false, "account": false, "product": true, "billing": false, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 90, "sentimentThreshold": -0.55, "refundValueThreshold": 5000, "confidenceThreshold": 0.62 }
+    },
+    "previous": {
+      "version": "4.2",
+      "config": {
+        "parameters": { "temperature": 0.72, "maxTokens": 400, "responseSpeed": 0.55, "empathy": 0.7, "stability": 0.72 },
+        "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": false },
+        "knowledge": { "returns": true, "shipping": false, "account": false, "product": true, "billing": false, "general": true, "safety": false },
+        "escalation": { "noAgentResponseSec": 120, "sentimentThreshold": -0.6, "refundValueThreshold": 5000, "confidenceThreshold": 0.58 }
+      }
+    },
+    "routing": [
+      { "intent": "Defect", "model": "v4.3", "tier": "All", "traffic": "20%", "failover": "v4.2" },
+      { "intent": "Defect", "model": "v4.2", "tier": "All", "traffic": "80%", "failover": "Human" },
+      { "intent": "Damaged item", "model": "v4.2", "tier": "VIP", "traffic": "100%", "failover": "Human" }
+    ],
+    "stats": { "fallbackRate": 0.13, "hallucinationRate": 0.006 },
+    "evals": { "scenarios": 24, "results": { "policy": 93, "refund": 90, "empathy": 88, "injection": 100, "knowledge": 81 } }
+  },
+  {
+    "id": "csr-finance",
+    "name": "CSR-Finance",
+    "description": "Billing questions, duplicate charges and subscriptions.",
+    "queue": "Billing",
+    "version": "1.9",
+    "deployedAt": "-21d",
+    "config": {
+      "parameters": { "temperature": 0.3, "maxTokens": 280, "responseSpeed": 0.6, "empathy": 0.6, "stability": 0.92 },
+      "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": true, "multilingual": false },
+      "knowledge": { "returns": false, "shipping": false, "account": false, "product": false, "billing": true, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 90, "sentimentThreshold": -0.5, "refundValueThreshold": 4000, "confidenceThreshold": 0.66 }
+    },
+    "previous": {
+      "version": "1.8",
+      "config": {
+        "parameters": { "temperature": 0.45, "maxTokens": 320, "responseSpeed": 0.5, "empathy": 0.5, "stability": 0.88 },
+        "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": false, "autoEscalate": true, "accountChanges": false, "proactiveCredits": true, "multilingual": false },
+        "knowledge": { "returns": false, "shipping": false, "account": false, "product": false, "billing": true, "general": true, "safety": false },
+        "escalation": { "noAgentResponseSec": 120, "sentimentThreshold": -0.6, "refundValueThreshold": 4000, "confidenceThreshold": 0.6 }
+      }
+    },
+    "routing": [
+      { "intent": "Duplicate charge", "model": "v1.9", "tier": "All", "traffic": "100%", "failover": "Human" },
+      { "intent": "Cancellation", "model": "v1.9", "tier": "Standard", "traffic": "100%", "failover": "v1.8" },
+      { "intent": "Chargeback", "model": "Human", "tier": "All", "traffic": "100%", "failover": "—" }
+    ],
+    "stats": { "fallbackRate": 0.07, "hallucinationRate": 0.003 },
+    "evals": { "scenarios": 24, "results": { "policy": 97, "refund": 93, "empathy": 80, "injection": 100, "knowledge": 88 } }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "preset-balanced",
+    "name": "Balanced",
+    "description": "Recommended default: steady tone, moderate creativity, standard thresholds.",
+    "builtIn": true,
+    "config": {
+      "parameters": { "temperature": 0.6, "maxTokens": 320, "responseSpeed": 0.65, "empathy": 0.75, "stability": 0.8 },
+      "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": true },
+      "knowledge": { "returns": true, "shipping": true, "account": true, "product": true, "billing": true, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 90, "sentimentThreshold": -0.55, "refundValueThreshold": 5000, "confidenceThreshold": 0.64 }
+    }
+  },
+  {
+    "id": "preset-conservative",
+    "name": "Conservative (high-risk queues)",
+    "description": "Low temperature, no autonomous refunds, escalates early.",
+    "builtIn": true,
+    "config": {
+      "parameters": { "temperature": 0.2, "maxTokens": 240, "responseSpeed": 0.4, "empathy": 0.7, "stability": 0.95 },
+      "capabilities": { "refunds": false, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": true },
+      "knowledge": { "returns": true, "shipping": true, "account": true, "product": true, "billing": true, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 60, "sentimentThreshold": -0.4, "refundValueThreshold": 2000, "confidenceThreshold": 0.75 }
+    }
+  },
+  {
+    "id": "preset-vip",
+    "name": "VIP care",
+    "description": "Maximum empathy, longer answers, higher refund authority.",
+    "builtIn": true,
+    "config": {
+      "parameters": { "temperature": 0.5, "maxTokens": 420, "responseSpeed": 0.5, "empathy": 0.95, "stability": 0.85 },
+      "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": true, "multilingual": true },
+      "knowledge": { "returns": true, "shipping": true, "account": true, "product": true, "billing": true, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 60, "sentimentThreshold": -0.45, "refundValueThreshold": 10000, "confidenceThreshold": 0.68 }
+    }
+  },
+  {
+    "id": "preset-peak",
+    "name": "Peak load (fast resolution)",
+    "description": "Short, fast replies for high-volume periods.",
+    "builtIn": true,
+    "config": {
+      "parameters": { "temperature": 0.4, "maxTokens": 160, "responseSpeed": 0.95, "empathy": 0.5, "stability": 0.8 },
+      "capabilities": { "refunds": true, "orderLookup": true, "knowledgeBase": true, "autoEscalate": true, "accountChanges": false, "proactiveCredits": false, "multilingual": false },
+      "knowledge": { "returns": true, "shipping": true, "account": true, "product": true, "billing": true, "general": true, "safety": true },
+      "escalation": { "noAgentResponseSec": 45, "sentimentThreshold": -0.6, "refundValueThreshold": 5000, "confidenceThreshold": 0.6 }
+    }
+  }
+]

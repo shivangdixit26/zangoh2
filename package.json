@@ -1,0 +1,28 @@
+{
+  "name": "zangoh-supervisor-workstation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Agent Supervisor Workstation: monitor, intervene in and tune AI customer-service agents.",
+  "workspaces": [
+    "mock-llm",
+    "vector-db",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n llm,vdb,api,web -c magenta,cyan,green,blue \"npm run dev -w mock-llm\" \"npm run dev -w vector-db\" \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "start": "concurrently -k -n llm,vdb,api,web -c magenta,cyan,green,blue \"npm run start -w mock-llm\" \"npm run start -w vector-db\" \"npm run start -w backend\" \"npm run preview -w frontend\"",
+    "build": "npm run build -w frontend",
+    "typecheck": "npm run typecheck -w backend && npm run typecheck -w frontend",
+    "test": "npm test -w mock-llm && npm test -w backend && npm test -w frontend",
+    "reset-data": "npm run reset -w backend",
+    "e2e": "node e2e/ui-flows.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "9.2.0",
+    "playwright-core": "1.54.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

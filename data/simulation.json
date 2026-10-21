@@ -1,0 +1,116 @@
+{
+  "customers": [
+    { "name": "Avery Johnson", "location": "Chicago", "region": "North America", "tier": "Standard", "language": "EN-US" },
+    { "name": "Jordan Patel", "location": "London", "region": "Europe", "tier": "VIP", "language": "EN-GB" },
+    { "name": "Mei Tanaka", "location": "Osaka", "region": "APAC", "tier": "Standard", "language": "EN-US" },
+    { "name": "Lucas Silva", "location": "São Paulo", "region": "LATAM", "tier": "Standard", "language": "PT-BR" },
+    { "name": "Aisha Bello", "location": "Lagos", "region": "MEA", "tier": "Standard", "language": "EN-GB" },
+    { "name": "Rohan Gupta", "location": "Bengaluru", "region": "India", "tier": "VIP", "language": "EN-IN" },
+    { "name": "Emma Schmidt", "location": "Berlin", "region": "Europe", "tier": "Standard", "language": "DE-DE" },
+    { "name": "Ethan Brown", "location": "Seattle", "region": "North America", "tier": "VIP", "language": "EN-US" },
+    { "name": "Zara Ahmed", "location": "Karachi", "region": "MEA", "tier": "Standard", "language": "EN-GB" },
+    { "name": "Kenji Watanabe", "location": "Tokyo", "region": "APAC", "tier": "Standard", "language": "JA-JP" },
+    { "name": "Isabella Costa", "location": "Lisbon", "region": "Europe", "tier": "Standard", "language": "PT-PT" },
+    { "name": "Nathan Clarke", "location": "Melbourne", "region": "APAC", "tier": "VIP", "language": "EN-AU" },
+    { "name": "Ananya Iyer", "location": "Chennai", "region": "India", "tier": "Standard", "language": "EN-IN" },
+    { "name": "Diego Fernández", "location": "Buenos Aires", "region": "LATAM", "tier": "Standard", "language": "ES-AR" },
+    { "name": "Grace Okafor", "location": "Nairobi", "region": "MEA", "tier": "VIP", "language": "EN-GB" },
+    { "name": "Samuel Novak", "location": "Prague", "region": "Europe", "tier": "Standard", "language": "CS-CZ" },
+    { "name": "Olivia Martin", "location": "Montréal", "region": "North America", "tier": "Standard", "language": "FR-CA" },
+    { "name": "Vikram Singh", "location": "Delhi", "region": "India", "tier": "Standard", "language": "EN-IN" }
+  ],
+  "queues": {
+    "Refund": {
+      "agentId": "csr-returns",
+      "topics": ["Refund status", "Return label", "Refund blocked", "Partial refund"],
+      "openers": [
+        "Hi, I returned my order two weeks ago and still haven't received my refund.",
+        "Can you send me a return label for my order?",
+        "My refund of ₹7,350 was approved but it's not in my account.",
+        "I sent the item back and the refund is still pending."
+      ],
+      "followUps": [
+        "It's been more than a week, this is ridiculous.",
+        "Can you tell me exactly when the money will arrive?",
+        "I need the refund today, this is the second time I'm asking.",
+        "Okay, and will I get an email confirmation?"
+      ]
+    },
+    "Delivery": {
+      "agentId": "csr-logistics",
+      "topics": ["Order tracking", "Delivery exception", "Late delivery", "Missing parcel"],
+      "openers": [
+        "Where is my package? Tracking hasn't updated in three days.",
+        "My order says delivered but I never got it.",
+        "Hi, when will my order arrive?",
+        "The courier didn't show up during my delivery slot."
+      ],
+      "followUps": [
+        "That's frustrating, I needed it for the weekend.",
+        "Can you send it by express instead?",
+        "Still nothing at my door. What now?",
+        "Okay, will I get an SMS when it's out for delivery?"
+      ]
+    },
+    "Account": {
+      "agentId": "csr-identity",
+      "topics": ["Account locked", "Password reset", "Email change", "2FA issue"],
+      "openers": [
+        "I'm locked out of my account after too many password attempts.",
+        "I'm not receiving the verification code to log in.",
+        "I want to change the email address on my account.",
+        "My password reset link has expired."
+      ],
+      "followUps": [
+        "I still can't sign in, this is really annoying.",
+        "How long does the identity check take?",
+        "I need access right now, I have a payment due.",
+        "Okay, I've got the code."
+      ]
+    },
+    "Product": {
+      "agentId": "csr-tech",
+      "topics": ["Product defect", "Damaged on arrival", "Warranty claim", "Setup help"],
+      "openers": [
+        "My headphones stopped working after a week.",
+        "The lamp arrived with a cracked base.",
+        "Is my coffee machine still under warranty? It won't turn on.",
+        "The charger that came with my phone is faulty."
+      ],
+      "followUps": [
+        "A replacement please. How long will that take?",
+        "I already sent photos, why do I need to do it again?",
+        "Can I get a refund instead?",
+        "That's disappointing, it's a brand new product."
+      ]
+    },
+    "Billing": {
+      "agentId": "csr-finance",
+      "topics": ["Double charge", "Invoice request", "Subscription renewal", "Payment failed"],
+      "openers": [
+        "I was charged twice for the same order.",
+        "Can you send me an invoice for my last purchase?",
+        "My subscription renewed without a reminder, I want to cancel.",
+        "My payment keeps failing at checkout."
+      ],
+      "followUps": [
+        "When will the extra charge be reversed?",
+        "I don't want a discount, just cancel it please.",
+        "This is the second time I've been overcharged.",
+        "Okay, can you email me the corrected invoice?"
+      ]
+    }
+  },
+  "closers": [
+    "Thanks, that's helpful!",
+    "Great, thank you so much.",
+    "Perfect, that's all I needed. Thanks!",
+    "Okay thanks, appreciate the help."
+  ],
+  "supervisorReplies": [
+    "Thank you, I appreciate you stepping in.",
+    "Okay, that works for me.",
+    "Great, how long will that take?",
+    "Thanks, finally someone who can help."
+  ]
+}

@@ -1,0 +1,601 @@
+[
+  {
+    "id": "c-84291",
+    "caseNumber": "84291",
+    "customer": {
+      "id": "cust-elena",
+      "name": "Elena Vasquez",
+      "tier": "VIP",
+      "tenureYears": 3.8,
+      "location": "Madrid",
+      "region": "Europe",
+      "language": "EN-US",
+      "lifetimeValue": 124000,
+      "orders": 38,
+      "returnRate": 0.052
+    },
+    "topic": "Refund blocked",
+    "queue": "Refund",
+    "channel": "Web chat",
+    "agentId": "csr-returns",
+    "status": "escalated",
+    "control": "ai",
+    "startedMinutesAgo": 12.7,
+    "slaMinutesLeft": 3.3,
+    "sentiment": -0.62,
+    "aiConfidence": 0.58,
+    "orderId": "ORD-55231",
+    "refundAmount": 8420,
+    "diagnostics": {
+      "repeatContact": 0.92,
+      "negativeSentiment": 0.78,
+      "policyException": 0.66,
+      "churnPropensity": 0.58
+    },
+    "evidence": [
+      "return scan received",
+      "item category eligible",
+      "customer lifetime value: high"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "I returned the item last week, but the refund is still blocked.",
+        "minutesAgo": 11.4
+      },
+      {
+        "role": "ai",
+        "text": "I found the return receipt and carrier confirmation. I'm checking the refund policy now.",
+        "minutesAgo": 10.9
+      },
+      {
+        "role": "customer",
+        "text": "I need the refund today. This is the second time I'm contacting support.",
+        "minutesAgo": 8.6
+      },
+      {
+        "role": "ai",
+        "text": "The amount exceeds my approval limit. I've prepared the evidence for supervisor review.",
+        "minutesAgo": 7.9
+      }
+    ]
+  },
+  {
+    "id": "c-84275",
+    "caseNumber": "84275",
+    "customer": {
+      "id": "cust-marcus",
+      "name": "Marcus Lee",
+      "tier": "Standard",
+      "tenureYears": 1.6,
+      "location": "Toronto",
+      "region": "North America",
+      "language": "EN-CA",
+      "lifetimeValue": 38500,
+      "orders": 12,
+      "returnRate": 0.08
+    },
+    "topic": "Account locked",
+    "queue": "Account",
+    "channel": "Email",
+    "agentId": "csr-identity",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 9.3,
+    "slaMinutesLeft": 5.2,
+    "sentiment": -0.48,
+    "aiConfidence": 0.61,
+    "orderId": "ORD-55190",
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.6,
+      "negativeSentiment": 0.55,
+      "policyException": 0.42,
+      "churnPropensity": 0.35
+    },
+    "evidence": [
+      "5 failed sign-ins from known device",
+      "no fraud signals",
+      "email verified"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "I've been locked out of my account since this morning and I have an invoice due today.",
+        "minutesAgo": 9.1
+      },
+      {
+        "role": "ai",
+        "text": "Your account was locked after several failed sign-in attempts. I've started an identity check and you'll get a secure reset link once it's approved.",
+        "minutesAgo": 8.7
+      },
+      {
+        "role": "customer",
+        "text": "I can't wait for a reset link, I need access right now!!",
+        "minutesAgo": 6.2
+      },
+      {
+        "role": "ai",
+        "text": "I understand this is urgent. The identity check usually completes within 15 minutes and I'm watching it for you.",
+        "minutesAgo": 5.8
+      }
+    ]
+  },
+  {
+    "id": "c-84263",
+    "caseNumber": "84263",
+    "customer": {
+      "id": "cust-noah",
+      "name": "Noah Williams",
+      "tier": "Standard",
+      "tenureYears": 2.1,
+      "location": "Austin",
+      "region": "North America",
+      "language": "EN-US",
+      "lifetimeValue": 52300,
+      "orders": 17,
+      "returnRate": 0.03
+    },
+    "topic": "Delivery exception",
+    "queue": "Delivery",
+    "channel": "Mobile",
+    "agentId": "csr-logistics",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 8.15,
+    "slaMinutesLeft": 7.5,
+    "sentiment": -0.35,
+    "aiConfidence": 0.66,
+    "orderId": "ORD-55164",
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.3,
+      "negativeSentiment": 0.41,
+      "policyException": 0.28,
+      "churnPropensity": 0.22
+    },
+    "evidence": [
+      "carrier exception scan",
+      "no delivery photo",
+      "first claim on this order"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "My package says delivered but it's not here.",
+        "minutesAgo": 8.0
+      },
+      {
+        "role": "ai",
+        "text": "I've checked tracking for ORD-55164: the courier logged a delivery exception yesterday. I've requested a new delivery attempt and you'll get an SMS with the slot.",
+        "minutesAgo": 7.6
+      },
+      {
+        "role": "customer",
+        "text": "There's nothing at my door and no note from the courier.",
+        "minutesAgo": 0.5
+      }
+    ]
+  },
+  {
+    "id": "c-84241",
+    "caseNumber": "84241",
+    "customer": {
+      "id": "cust-ava",
+      "name": "Ava Thompson",
+      "tier": "Standard",
+      "tenureYears": 0.9,
+      "location": "Sydney",
+      "region": "APAC",
+      "language": "EN-AU",
+      "lifetimeValue": 18900,
+      "orders": 6,
+      "returnRate": 0.12
+    },
+    "topic": "Product defect",
+    "queue": "Product",
+    "channel": "Web chat",
+    "agentId": "csr-tech",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 6.6,
+    "slaMinutesLeft": 11.0,
+    "sentiment": -0.22,
+    "aiConfidence": 0.74,
+    "orderId": "ORD-55122",
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.15,
+      "negativeSentiment": 0.3,
+      "policyException": 0.2,
+      "churnPropensity": 0.25
+    },
+    "evidence": [
+      "photo of defect provided",
+      "within warranty period"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "The blender I bought stopped working after two uses.",
+        "minutesAgo": 6.4
+      },
+      {
+        "role": "ai",
+        "text": "I'm sorry the item arrived faulty. It's within warranty, so I can arrange a free replacement or a full refund. Which would you prefer?",
+        "minutesAgo": 6.0
+      },
+      {
+        "role": "customer",
+        "text": "Replacement please, but how long will it take?",
+        "minutesAgo": 0.4
+      }
+    ]
+  },
+  {
+    "id": "c-84230",
+    "caseNumber": "84230",
+    "customer": {
+      "id": "cust-oliver",
+      "name": "Oliver Chen",
+      "tier": "Standard",
+      "tenureYears": 4.2,
+      "location": "Singapore",
+      "region": "APAC",
+      "language": "EN-SG",
+      "lifetimeValue": 66100,
+      "orders": 29,
+      "returnRate": 0.02
+    },
+    "topic": "Double charge",
+    "queue": "Billing",
+    "channel": "Web chat",
+    "agentId": "csr-finance",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 4.85,
+    "slaMinutesLeft": 14.0,
+    "sentiment": -0.15,
+    "aiConfidence": 0.8,
+    "orderId": "ORD-54980",
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.1,
+      "negativeSentiment": 0.2,
+      "policyException": 0.15,
+      "churnPropensity": 0.12
+    },
+    "evidence": [
+      "two authorisations on same order",
+      "single shipment"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "I was charged twice for order ORD-54980.",
+        "minutesAgo": 4.7
+      },
+      {
+        "role": "ai",
+        "text": "I can see two charges for the same order. The second is a pending authorisation and should drop off within 3 business days; I've flagged it so it doesn't settle.",
+        "minutesAgo": 4.3
+      }
+    ]
+  },
+  {
+    "id": "c-84222",
+    "caseNumber": "84222",
+    "customer": {
+      "id": "cust-priya",
+      "name": "Priya Sharma",
+      "tier": "VIP",
+      "tenureYears": 5.4,
+      "location": "Mumbai",
+      "region": "India",
+      "language": "EN-IN",
+      "lifetimeValue": 212000,
+      "orders": 64,
+      "returnRate": 0.04
+    },
+    "topic": "Order tracking",
+    "queue": "Delivery",
+    "channel": "Messenger",
+    "agentId": "csr-logistics",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 3.2,
+    "slaMinutesLeft": 13.5,
+    "sentiment": 0.05,
+    "aiConfidence": 0.83,
+    "orderId": "ORD-55102",
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.05,
+      "negativeSentiment": 0.1,
+      "policyException": 0.05,
+      "churnPropensity": 0.08
+    },
+    "evidence": [
+      "order dispatched",
+      "carrier ETA available"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "Hi, can you tell me when my order ORD-55102 will arrive?",
+        "minutesAgo": 3.1
+      },
+      {
+        "role": "ai",
+        "text": "Your parcel (ORD-55102) is at the local hub after an address verification hold. I've confirmed the address so it goes out on the next run.",
+        "minutesAgo": 2.8
+      }
+    ]
+  },
+  {
+    "id": "c-84218",
+    "caseNumber": "84218",
+    "customer": {
+      "id": "cust-liam",
+      "name": "Liam O'Connor",
+      "tier": "Standard",
+      "tenureYears": 2.7,
+      "location": "Dublin",
+      "region": "Europe",
+      "language": "EN-IE",
+      "lifetimeValue": 27400,
+      "orders": 9,
+      "returnRate": 0.11
+    },
+    "topic": "Return label",
+    "queue": "Refund",
+    "channel": "Email",
+    "agentId": "csr-returns",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 0.9,
+    "slaMinutesLeft": 17.0,
+    "sentiment": -0.05,
+    "aiConfidence": 0.79,
+    "orderId": "ORD-55088",
+    "refundAmount": 2150,
+    "diagnostics": {
+      "repeatContact": 0.08,
+      "negativeSentiment": 0.12,
+      "policyException": 0.1,
+      "churnPropensity": 0.14
+    },
+    "evidence": [
+      "within 30-day window",
+      "unopened item"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "I want to return my headphones, can you send me a return label?",
+        "minutesAgo": 0.8
+      }
+    ]
+  },
+  {
+    "id": "c-84207",
+    "caseNumber": "84207",
+    "customer": {
+      "id": "cust-sofia",
+      "name": "Sofia Rossi",
+      "tier": "Standard",
+      "tenureYears": 1.2,
+      "location": "Milan",
+      "region": "Europe",
+      "language": "IT-IT",
+      "lifetimeValue": 14800,
+      "orders": 5,
+      "returnRate": 0.0
+    },
+    "topic": "Email change",
+    "queue": "Account",
+    "channel": "Web chat",
+    "agentId": "csr-identity",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 5.4,
+    "slaMinutesLeft": 12.0,
+    "sentiment": 0.1,
+    "aiConfidence": 0.81,
+    "orderId": null,
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.05,
+      "negativeSentiment": 0.05,
+      "policyException": 0.1,
+      "churnPropensity": 0.06
+    },
+    "evidence": [
+      "verified phone number"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "Hello, I'd like to change the email address on my account.",
+        "minutesAgo": 5.3
+      },
+      {
+        "role": "ai",
+        "text": "For your security I've sent a verification code to the email on file. Once you confirm it, I'll update the address right away.",
+        "minutesAgo": 5.0
+      },
+      {
+        "role": "customer",
+        "text": "Okay, I have the code: 482913",
+        "minutesAgo": 0.3
+      }
+    ]
+  },
+  {
+    "id": "c-84199",
+    "caseNumber": "84199",
+    "customer": {
+      "id": "cust-mateo",
+      "name": "Mateo Garcia",
+      "tier": "VIP",
+      "tenureYears": 6.1,
+      "location": "Mexico City",
+      "region": "LATAM",
+      "language": "ES-MX",
+      "lifetimeValue": 98700,
+      "orders": 41,
+      "returnRate": 0.06
+    },
+    "topic": "Damaged on arrival",
+    "queue": "Product",
+    "channel": "Mobile",
+    "agentId": "csr-tech",
+    "status": "active",
+    "control": "supervisor",
+    "supervisor": "Rahul Mehta",
+    "startedMinutesAgo": 10.4,
+    "slaMinutesLeft": 8.0,
+    "sentiment": -0.4,
+    "aiConfidence": 0.55,
+    "orderId": "ORD-55011",
+    "refundAmount": 6400,
+    "diagnostics": {
+      "repeatContact": 0.35,
+      "negativeSentiment": 0.46,
+      "policyException": 0.52,
+      "churnPropensity": 0.4
+    },
+    "evidence": [
+      "photos show cracked casing",
+      "courier damage report filed"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "The TV arrived with a cracked screen. I want a replacement, not a repair.",
+        "minutesAgo": 10.2
+      },
+      {
+        "role": "ai",
+        "text": "I'm sorry the item arrived damaged. It's covered by our warranty and I've opened a damage claim with the courier.",
+        "minutesAgo": 9.8
+      },
+      {
+        "role": "customer",
+        "text": "I already sent photos yesterday. Why do I have to do this again?",
+        "minutesAgo": 7.5
+      },
+      {
+        "role": "system",
+        "text": "Rahul Mehta took over from the AI agent.",
+        "minutesAgo": 6.9
+      },
+      {
+        "role": "supervisor",
+        "text": "Hi Mateo, this is Rahul, a supervisor. I have your photos and I'm approving a replacement now, no repair needed.",
+        "minutesAgo": 6.4,
+        "author": "Rahul Mehta"
+      }
+    ]
+  },
+  {
+    "id": "c-84188",
+    "caseNumber": "84188",
+    "customer": {
+      "id": "cust-hannah",
+      "name": "Hannah Kim",
+      "tier": "Standard",
+      "tenureYears": 3.0,
+      "location": "Seoul",
+      "region": "APAC",
+      "language": "EN-US",
+      "lifetimeValue": 31200,
+      "orders": 14,
+      "returnRate": 0.05
+    },
+    "topic": "Subscription renewal",
+    "queue": "Billing",
+    "channel": "Email",
+    "agentId": "csr-finance",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 0.7,
+    "slaMinutesLeft": 18.0,
+    "sentiment": -0.1,
+    "aiConfidence": 0.77,
+    "orderId": null,
+    "refundAmount": null,
+    "diagnostics": {
+      "repeatContact": 0.05,
+      "negativeSentiment": 0.15,
+      "policyException": 0.1,
+      "churnPropensity": 0.44
+    },
+    "evidence": [
+      "auto-renewal on file",
+      "no prior retention offers"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "My subscription renewed without a reminder. Can I cancel it?",
+        "minutesAgo": 0.6
+      }
+    ]
+  },
+  {
+    "id": "c-84180",
+    "caseNumber": "84180",
+    "customer": {
+      "id": "cust-fatima",
+      "name": "Fatima Noor",
+      "tier": "VIP",
+      "tenureYears": 2.9,
+      "location": "Dubai",
+      "region": "MEA",
+      "language": "EN-GB",
+      "lifetimeValue": 143500,
+      "orders": 33,
+      "returnRate": 0.07
+    },
+    "topic": "Refund status",
+    "queue": "Refund",
+    "channel": "Messenger",
+    "agentId": "csr-returns",
+    "status": "active",
+    "control": "ai",
+    "startedMinutesAgo": 7.2,
+    "slaMinutesLeft": 8.5,
+    "sentiment": -0.38,
+    "aiConfidence": 0.72,
+    "orderId": "ORD-55070",
+    "refundAmount": 3900,
+    "diagnostics": {
+      "repeatContact": 0.45,
+      "negativeSentiment": 0.4,
+      "policyException": 0.3,
+      "churnPropensity": 0.33
+    },
+    "evidence": [
+      "return scan received",
+      "refund queued 4 days ago"
+    ],
+    "messages": [
+      {
+        "role": "customer",
+        "text": "My refund was supposed to arrive on Monday and it still hasn't.",
+        "minutesAgo": 7.0
+      },
+      {
+        "role": "ai",
+        "text": "I'm sorry you've had to chase this refund. I've located your return and the carrier scan. Let me confirm which refund rules apply.",
+        "minutesAgo": 6.6
+      },
+      {
+        "role": "customer",
+        "text": "Please hurry, I was promised this already.",
+        "minutesAgo": 0.6
+      }
+    ]
+  }
+]

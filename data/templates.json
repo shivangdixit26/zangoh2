@@ -1,0 +1,462 @@
+[
+  {
+    "id": "tpl-welcome",
+    "name": "Welcome new visitor",
+    "title": "Friendly greeting with clear next steps.",
+    "category": "Onboarding",
+    "type": "Chat",
+    "channels": [
+      "Website"
+    ],
+    "content": "**Welcome, {{user_name}} 👋**\nThanks for visiting {{company_name}}. I can help you get started or point you to the right product guide.",
+    "cta": "View getting started",
+    "uses": 128,
+    "lastUsedDaysAgo": 0.2,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": [
+      "Neha Prasad"
+    ]
+  },
+  {
+    "id": "tpl-tour",
+    "name": "Product tour invite",
+    "title": "Invite visitors to explore key features.",
+    "category": "Onboarding",
+    "type": "Chat",
+    "channels": [
+      "Messenger"
+    ],
+    "content": "Hi {{user_name}}! Want a quick 2-minute tour of {{company_name}}? I'll show you the features most customers use first.",
+    "cta": "Start the tour",
+    "uses": 84,
+    "lastUsedDaysAgo": 1.5,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-checklist",
+    "name": "Getting started checklist",
+    "title": "Share a short first-session checklist.",
+    "category": "Onboarding",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nHere's a short checklist to get the most out of {{company_name}}:\n- Complete your profile\n- Save a delivery address\n- Turn on order notifications",
+    "cta": "Open checklist",
+    "uses": 61,
+    "lastUsedDaysAgo": 3,
+    "shared": false,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-trial",
+    "name": "Trial follow-up",
+    "title": "Guide visitors after trial activation.",
+    "category": "Onboarding",
+    "type": "Chat",
+    "channels": [
+      "Mobile"
+    ],
+    "content": "Hi {{user_name}}, your trial is active! Reply here any time if you'd like help setting things up.",
+    "cta": null,
+    "uses": 61,
+    "lastUsedDaysAgo": 4,
+    "shared": true,
+    "createdBy": "Arjun Rao",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-setup",
+    "name": "Setup help offer",
+    "title": "Offer hands-on help during setup.",
+    "category": "Onboarding",
+    "type": "Chat",
+    "channels": [
+      "Website"
+    ],
+    "content": "Hi {{user_name}}, I noticed you're setting up your account. Would you like me to walk you through it?",
+    "cta": null,
+    "uses": 22,
+    "lastUsedDaysAgo": 9,
+    "shared": true,
+    "createdBy": "Arjun Rao",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-refund-approved",
+    "name": "Refund approved",
+    "title": "Confirm an approved refund with timing.",
+    "category": "Returns",
+    "type": "Chat",
+    "channels": [
+      "Website",
+      "Messenger"
+    ],
+    "content": "Hi {{user_name}}, I've reviewed the return for order {{order_id}} and approved a refund of {{refund_amount}}. You'll see it on your original payment method within 24 hours.",
+    "cta": null,
+    "uses": 112,
+    "lastUsedDaysAgo": 0.05,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": [
+      "Neha Prasad"
+    ]
+  },
+  {
+    "id": "tpl-refund-delay",
+    "name": "Refund delay apology",
+    "title": "Apologise and commit to a follow-up time.",
+    "category": "Returns",
+    "type": "Chat",
+    "channels": [
+      "Website",
+      "Email"
+    ],
+    "content": "Hi {{user_name}}, I'm sorry your refund for {{order_id}} is taking longer than expected. I've escalated case {{case_id}} and will update you by {{follow_up_time}}.",
+    "cta": null,
+    "uses": 97,
+    "lastUsedDaysAgo": 0.4,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-delivery-delay",
+    "name": "Delivery delay update",
+    "title": "Share a new delivery estimate.",
+    "category": "Shipping",
+    "type": "Chat",
+    "channels": [
+      "Mobile",
+      "Messenger"
+    ],
+    "content": "Hi {{user_name}}, your order {{order_id}} was delayed at the courier hub. The new estimated delivery date is {{delivery_date}}. I'll keep an eye on it for you.",
+    "cta": "Track order",
+    "uses": 76,
+    "lastUsedDaysAgo": 0.8,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-replacement",
+    "name": "Replacement shipped",
+    "title": "Confirm a replacement is on the way.",
+    "category": "Shipping",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nGood news: a replacement for order {{order_id}} has shipped by express delivery. You don't need to return the original item.",
+    "cta": "Track replacement",
+    "uses": 54,
+    "lastUsedDaysAgo": 2,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-return-label",
+    "name": "Return label sent",
+    "title": "Send a prepaid return label.",
+    "category": "Returns",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nYour prepaid return label for order {{order_id}} is attached. Drop the parcel at any partner location within 14 days.",
+    "cta": "Download label",
+    "uses": 41,
+    "lastUsedDaysAgo": 5,
+    "shared": false,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-order-resend",
+    "name": "Order confirmation resend",
+    "title": "Resend an order confirmation.",
+    "category": "Shipping",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}}, I've resent the confirmation for order {{order_id}} to your email address.",
+    "cta": null,
+    "uses": 8,
+    "lastUsedDaysAgo": 20,
+    "shared": true,
+    "createdBy": "Arjun Rao",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-duplicate-charge",
+    "name": "Duplicate charge reversed",
+    "title": "Explain a reversed duplicate charge.",
+    "category": "Billing",
+    "type": "Chat",
+    "channels": [
+      "Website"
+    ],
+    "content": "Hi {{user_name}}, I've reversed the duplicate charge on order {{order_id}}. The hold will disappear from your statement within 3 business days.",
+    "cta": null,
+    "uses": 66,
+    "lastUsedDaysAgo": 0.6,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": [
+      "Neha Prasad"
+    ]
+  },
+  {
+    "id": "tpl-invoice",
+    "name": "Invoice copy",
+    "title": "Send a copy of an invoice.",
+    "category": "Billing",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nAs requested, a copy of your invoice for order {{order_id}} is attached.",
+    "cta": "Download invoice",
+    "uses": 35,
+    "lastUsedDaysAgo": 6,
+    "shared": true,
+    "createdBy": "Arjun Rao",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-payment-failed",
+    "name": "Payment failed, retry",
+    "title": "Help a customer retry a failed payment.",
+    "category": "Billing",
+    "type": "SMS",
+    "channels": [
+      "Mobile"
+    ],
+    "content": "Hi {{user_name}}, your payment for {{company_name}} didn't go through. You can retry securely from the app in under a minute.",
+    "cta": "Retry payment",
+    "uses": 18,
+    "lastUsedDaysAgo": 11,
+    "shared": true,
+    "createdBy": "Arjun Rao",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-price-change",
+    "name": "Plan price change notice",
+    "title": "Explain an upcoming plan price change.",
+    "category": "Billing",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nFrom next month your plan price changes. Nothing changes until then, and you can switch plans at any time.",
+    "cta": null,
+    "uses": 4,
+    "lastUsedDaysAgo": 30,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-pause-offer",
+    "name": "Subscription pause offer",
+    "title": "Offer a pause before cancelling.",
+    "category": "Billing",
+    "type": "Chat",
+    "channels": [
+      "Messenger"
+    ],
+    "content": "Hi {{user_name}}, before you cancel: you can pause your subscription for up to 3 months and keep your history. Would that help?",
+    "cta": "Pause subscription",
+    "uses": 39,
+    "lastUsedDaysAgo": 2.5,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-feedback",
+    "name": "Feedback request",
+    "title": "Ask for feedback after resolution.",
+    "category": "Engagement",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nThanks for contacting {{company_name}}. Could you take 30 seconds to tell us how we did on case {{case_id}}?",
+    "cta": "Rate your experience",
+    "uses": 57,
+    "lastUsedDaysAgo": 1,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-loyalty",
+    "name": "Loyalty thank-you",
+    "title": "Thank long-standing customers.",
+    "category": "Engagement",
+    "type": "SMS",
+    "channels": [
+      "Mobile"
+    ],
+    "content": "Thank you for being with {{company_name}}, {{user_name}}! We've added a small thank-you credit to your account.",
+    "cta": null,
+    "uses": 12,
+    "lastUsedDaysAgo": 14,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-winback",
+    "name": "Win-back offer",
+    "title": "Re-engage a lapsed customer.",
+    "category": "Engagement",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nWe miss you at {{company_name}}. Here's 15% off your next order, valid for 30 days.",
+    "cta": "Shop now",
+    "uses": 6,
+    "lastUsedDaysAgo": 25,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-supervisor-intro",
+    "name": "Supervisor introduction",
+    "title": "Introduce yourself when taking over.",
+    "category": "General",
+    "type": "Chat",
+    "channels": [
+      "Website",
+      "Messenger"
+    ],
+    "content": "Hi {{user_name}}, I'm {{agent_name}}, a supervisor at {{company_name}}. I've read the full conversation on case {{case_id}} and I'm taking care of this personally.",
+    "cta": null,
+    "uses": 88,
+    "lastUsedDaysAgo": 0.1,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": [
+      "Neha Prasad"
+    ]
+  },
+  {
+    "id": "tpl-escalation-ack",
+    "name": "Escalation acknowledged",
+    "title": "Reassure the customer after escalation.",
+    "category": "General",
+    "type": "Chat",
+    "channels": [
+      "Website"
+    ],
+    "content": "Thanks for your patience, {{user_name}}. Your case {{case_id}} is now with our senior team and you'll hear back within {{follow_up_time}}.",
+    "cta": null,
+    "uses": 71,
+    "lastUsedDaysAgo": 0.3,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-account-unlocked",
+    "name": "Account unlocked",
+    "title": "Confirm restored account access.",
+    "category": "Account",
+    "type": "Chat",
+    "channels": [
+      "Website",
+      "Email"
+    ],
+    "content": "Hi {{user_name}}, I've verified your identity and unlocked your account. Please reset your password with the link we just emailed you.",
+    "cta": "Reset password",
+    "uses": 49,
+    "lastUsedDaysAgo": 1.2,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-id-verify",
+    "name": "Identity verification steps",
+    "title": "Explain how to verify identity.",
+    "category": "Account",
+    "type": "Email",
+    "channels": [
+      "Email"
+    ],
+    "content": "Hi {{user_name}},\nTo protect your account we need to verify your identity. Reply with the last 4 digits of your payment card and your billing postcode.",
+    "cta": null,
+    "uses": 27,
+    "lastUsedDaysAgo": 7,
+    "shared": true,
+    "createdBy": "Arjun Rao",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-closing",
+    "name": "Closing check-in",
+    "title": "Wrap up and check nothing is missing.",
+    "category": "General",
+    "type": "Chat",
+    "channels": [
+      "Messenger",
+      "Website"
+    ],
+    "content": "Is there anything else I can help you with today, {{user_name}}? If not, have a great day!",
+    "cta": null,
+    "uses": 93,
+    "lastUsedDaysAgo": 0.15,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-lost-parcel",
+    "name": "Lost parcel investigation",
+    "title": "Open a courier investigation and set expectations.",
+    "category": "Shipping",
+    "type": "Chat",
+    "channels": [
+      "Website",
+      "Mobile"
+    ],
+    "content": "Hi {{user_name}}, I'm sorry your parcel for order {{order_id}} hasn't arrived. I've opened an investigation with the courier and you'll hear back by {{follow_up_time}}. If it isn't found, we'll reship or refund, your choice.",
+    "cta": "Track investigation",
+    "uses": 44,
+    "lastUsedDaysAgo": 0.7,
+    "shared": true,
+    "createdBy": "Rahul Mehta",
+    "favoriteBy": []
+  },
+  {
+    "id": "tpl-warranty",
+    "name": "Warranty replacement offer",
+    "title": "Offer a replacement or refund under warranty.",
+    "category": "Product",
+    "type": "Chat",
+    "channels": [
+      "Website",
+      "Messenger"
+    ],
+    "content": "Hi {{user_name}}, I'm sorry the item stopped working. It's covered by our warranty, so I can ship a free replacement today or refund it in full. Which would you prefer?",
+    "cta": null,
+    "uses": 58,
+    "lastUsedDaysAgo": 0.5,
+    "shared": true,
+    "createdBy": "Neha Prasad",
+    "favoriteBy": [
+      "Neha Prasad"
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "vector-db",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal in-memory vector database (collections, upsert, cosine top-k query) with optional JSON persistence.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
